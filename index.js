@@ -1,5 +1,8 @@
 // app/index.js
 
+require('dotenv').config();
+
+// Your application initialization code follows...
 const express = require('express');
 const bodyParser = require('body-parser');
 const errorHandler = require('./middleware/errorHandler');
@@ -18,7 +21,7 @@ app.use('/auth', authRoutes);
 app.use('/api/organisations', organisationRoutes);
 
 // Sync Sequelize models with database
-sequelize.sync({ force: false }) // Set force: true to drop existing tables on each sync (use with caution in development)
+sequelize.sync({ force: false })
   .then(() => {
     console.log('Database synced successfully');
     // Start the server
