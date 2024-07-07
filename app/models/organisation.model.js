@@ -1,7 +1,7 @@
 // app/models/organisation.model.js
 
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../../config/database'); // Correct path
 
 const Organisation = sequelize.define('Organisation', {
   orgId: {

@@ -1,6 +1,7 @@
 // app/controllers/auth.controller.js
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // Update this line if you switched to bcryptjs
+const sequelize = require('../../config/database'); // Correct path
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
 const User = require('../models/user.model');
